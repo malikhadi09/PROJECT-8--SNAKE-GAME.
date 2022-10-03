@@ -2,15 +2,17 @@
 A snake game project, using the concept of OOP I made this project. I'm using loops, nested loops, function, variable etc to built this game. It is a simple game like the old classic if the snake head eat it tails get bigger and if the head and the tail meet then the snake will die and the game will end.
 
 
-Objective:
+# Objective:
 Gaming industry is a multibillion-dollar industry and has maligned the youth to itself. Being fresh CS students and having interest in gaming, we built a snake game using the practical knowledge of C++ GAINED IN Programming Fundamentals Lab classes.
 
 
 Following is the detail of the components of our code:
 
-Libraries:
+# Libraries:
 We used iostream for regular input-output functions, windows,h for mode(), setup(), draw(), input(), logic() functions and conio.h is necessarily for _kbhit((), _getch() functions.
-Variable:
+
+# Variable:
+
 •	gameover to keep a check on game.
 •	width and height are constants which are used to set the size of the walls.
 •	choice for choosing among menu options.
@@ -28,7 +30,8 @@ Line of code: 15
  ![image](https://user-images.githubusercontent.com/92660593/193561964-07358aa8-f9fc-4d7f-8b51-2f319043a037.png)
 
 
-Setup Function:
+# Setup Function:
+
 Here, we initialized the gameover to false, dir to stop. Though we can generate the snake anywhere, but we have generated it in the middle. And after generating the snake, we then generated the food at any random point but within the height and width of the wall.
 Line of code: 38
 
@@ -38,14 +41,15 @@ Line of code: 38
 
  
 
-Draw Function:
+# Draw Function:
+
 Here we just build up the wall boundary. Display the snake from head to tail and the fruit. The walls are shown by ‘#’ character, the snake’s body is shown by ‘o’ characters and the fruit by ‘*’.
 Line of the code: 52
 
 ![image](https://user-images.githubusercontent.com/92660593/193562040-af065f93-938c-4da8-ad37-c5df6cb21582.png)
 
 
-Input Function:
+# Input Function:
  
 In the input function, we used switch statements and when the _kbhit() function occurs we just maintained the switch cases (w, a, s, d) and change the direction respectively. The x key is for closing the game.
 Line of the code: 97
@@ -55,7 +59,7 @@ Line of the code: 97
 ![image](https://user-images.githubusercontent.com/92660593/193562077-f27b5b25-89d2-4667-bddd-3c5b61866a7f.png)
 
  
-Logic Function:
+# Logic Function:
 In the logic function, we first initialized the tail. And after that, we switched the position of the snake’s body with its previous position. And after that, the program simply needs to implement the body according to the keyboard hit. Next, as this follows the concept of an open maze, so when it disappears at one side, it appears from the other side, so we kept in mind that once it touches the right wall it appears from the other left wall and vice-versa and same follows for the up and down walls. Next, the head touches the body, the game crashes. For the scoring system we added 10 points hen the head touches the food (their position becomes the same). And every touch increases the score.
 Line of code: 124
 
@@ -64,13 +68,13 @@ Line of code: 124
 ![image](https://user-images.githubusercontent.com/92660593/193562229-6c206606-d999-4675-9f62-8ce5fc32a208.png)
 
  
-Main Function:
+# Main Function:
 The main boy calls all the function and has the instructions to show the main menu and give a response according to the user input.
 Line of code: 176
 
 
 
-Input:
+# Input:
 The user uses the prescribed keyboard keys to play the game:
 
 •	Keys:
@@ -82,11 +86,11 @@ The user uses the prescribed keyboard keys to play the game:
 
 [D] = Right
 
-Output:
+# Output:
 Using the keys, the user can toggle through the menu and navigate the snake to get food.
 
 
-Program:
+# Program:
 
 #include <iostream>
 #include <conio.h>//FOR INPUT OUTPUT PURPOSE #include <windows.h>//FOR FUNCTIONS IN WINDOWS API using namespace std;
